@@ -27,7 +27,7 @@ contract Part {
     modifier isOwner3() {
         // revert(); for revert transation
         if (msg.sender != Owner) {
-            revert(); // less gass
+            revert("Not Owner"); // less gass
         }
         _;
     }
